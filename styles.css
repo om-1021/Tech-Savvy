@@ -319,7 +319,7 @@ button,
   color: red;
 }
 
-@media only screen and (max-width: 950px) {
+@media all and (max-width: 950px) {
   body {
     background-color: lightblue;
   }
