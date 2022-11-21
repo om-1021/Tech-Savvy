@@ -37,13 +37,12 @@ nav {
   text-shadow: 1px 1px aqua;
   margin-right: 20px;
   animation: glow 1s ease-in-out infinite alternate;
-
 }
 
 @-webkit-keyframes glow {
   to {
-    text-shadow: 0 0 0, 0 0 16px red, 0 0 5px red, 0 0 50px red,
-      0 0 60px yellow, 0 0 11px yellow, 0 0 10px yellow;
+    text-shadow: 0 0 0, 0 0 16px red, 0 0 5px red, 0 0 50px red, 0 0 60px yellow,
+      0 0 11px yellow, 0 0 10px yellow;
   }
 }
 
@@ -64,27 +63,35 @@ nav {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.conatiner {
+.container {
   height: 60vh;
   flex-direction: row;
   width: 100vw;
   padding-bottom: 50px;
   display: flex;
-
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 5%;
 }
 
+.image-btn-container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 hr {
-  border:none;
+  border: none;
   height: 20px;
- 	width: 90%;
-	height: 50px;
-	margin-top: 0;
-	border-bottom: 1px solid #1f1209;
-	box-shadow: 0 20px 20px -20px #333;
+  width: 90%;
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px solid #1f1209;
+  box-shadow: 0 20px 20px -20px #333;
   margin: -50px auto 10px;
 }
 
@@ -93,18 +100,15 @@ hr {
   height: 200px;
   width: 400px;
   border-radius: 5%;
-box-shadow: 0 0 20px 10px aqua;
+  box-shadow: 0 0 20px 10px aqua;
 }
 
-.image:hover{
+.image:hover {
   transition: 0.3s linear;
   transition-property: all;
-  transform: scale(1.10,1.10);
-box-shadow: 0 0 20px 10px red;
-
+  transform: scale(1.1, 1.1);
+  box-shadow: 0 0 20px 10px red;
 }
-
-
 
 .para {
   height: 200px;
@@ -113,6 +117,17 @@ box-shadow: 0 0 20px 10px red;
   margin-right: 50px;
   text-align: left;
   line-height: 1.6;
+}
+
+.small-btn {
+  height: 30px;
+  margin: 8px 0;
+  border-radius: 10px;
+}
+
+.small-btn:hover {
+  transition: 0.2s linear;
+  transform: scale(1.1, 1.1);
 }
 
 /* regristation form */
@@ -169,8 +184,6 @@ box-shadow: 0 0 20px 10px red;
   width: 700px;
 }
 
-
-
 .form button {
   width: 500px;
   height: 50px;
@@ -178,12 +191,12 @@ box-shadow: 0 0 20px 10px red;
   border-radius: 10px;
 }
 
-button,.small-btn:hover{
+button,
+.small-btn:hover {
   cursor: pointer;
 }
 
 .glow-on-hover {
-
   width: 220px;
   height: 50px;
   border: none;
@@ -193,7 +206,6 @@ button,.small-btn:hover{
   position: relative;
   z-index: 0;
   border-radius: 10px;
-
 }
 
 .glow-on-hover:before {
@@ -246,7 +258,6 @@ button,.small-btn:hover{
   left: 0;
   top: 0;
   border-radius: 10px;
-
 }
 
 @keyframes glowing {
@@ -260,6 +271,8 @@ button,.small-btn:hover{
     background-position: 0 0;
   }
 }
+
+/* footer section */
 
 .footer {
   display: flex;
@@ -284,32 +297,89 @@ button,.small-btn:hover{
   line-height: 1.6;
 }
 
-.follow-us{
+.follow-us {
   display: flex;
-  justify content: center;
+  justify-content: center;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
 }
-.follow-us a{
+.follow-us a {
   color: aqua;
 }
-.icons{
-  width:300px;
+.icons {
+  width: 300px;
   display: flex;
-  justify content: center;
+  justify-content: center;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.small-btn{
-  height: 30px;
-  margin: 8px 0;
-  border-radius: 10px;
+.icons > a:hover {
+  color: red;
 }
 
-.small-btn:hover{
-  transition: 0.2s linear;
-  transform: scale(1.10,1.10)
+@media only screen and (max-width: 950px) {
+  body {
+    background-color: lightblue;
+  }
 
+  .container {
+    height: 100vh;
+    flex-direction: row;
+    width: 100vw;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5%;
+    margin-bottom: 50px;
+  }
+
+  .form {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    margin: auto;
+    padding: 10px 0 10px 0;
+    border-radius: 0 0 20px 20px;
+  }
+  .form-heading {
+    margin: auto;
+    margin-top: 100px;
+    padding-top: 20px;
+    color: white;
+    border-radius: 20px 20px 0 0;
+    background-color: black;
+    width: 400px;
+    text-align: center;
+  }
+  .input-fields {
+    width: 300px;
+    margin: 10px 0;
+    line-height: 25px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 3px solid #ffde00;
+  }
+
+  .from-regristation {
+    width: 400px;
+  }
+  .large-field {
+    width: 300px;
+  }
+
+  .form button {
+    width: 250px;
+    height: 50px;
+    margin: 50px 0;
+    border-radius: 10px;
+  }
 }
