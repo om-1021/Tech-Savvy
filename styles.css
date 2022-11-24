@@ -63,6 +63,11 @@ nav {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+i {
+  margin: 0 20px;
+}
+
 .container {
   height: 60vh;
   flex-direction: row;
